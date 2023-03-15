@@ -1,53 +1,51 @@
-import { Meta, StoryObj } from '@storybook/react'
-import { Text, TextProps } from './Text'
+import { Meta, StoryObj } from "@storybook/react";
+import { Text, TextProps } from "./Text";
 
 export default {
-  title: 'Components/Text',
+  title: "Components/Text",
   component: Text,
   args: {
-     children: 'Lorem Ipsum',
-     size: 'md'
+    children: "Lorem Ipsum",
+    size: "md",
   },
   argTypes: {
     size: {
-      option: ['sm', 'md', 'lg'],
+      option: ["sm", "md", "lg"],
       control: {
-        type: 'inline-radio',
-      }
-    }
-  }
-} as Meta<TextProps>
+        type: "inline-radio",
+      },
+    },
+  },
+} as Meta<TextProps>;
 
-export const Default: StoryObj<TextProps> = {}
+export const Default: StoryObj<TextProps> = {};
 
 export const Small: StoryObj<TextProps> = {
   args: {
-    size: 'sm'
-  }
-}
+    size: "sm",
+  },
+};
 
 export const Large: StoryObj<TextProps> = {
   args: {
-    size: 'lg'
-  }
-}
+    size: "lg",
+  },
+};
 export const CustomComponent: StoryObj<TextProps> = {
   args: {
     asChild: true,
-    children: (
-      <p>Text as paragraph</p>
-    )
+    children: <p>Text as paragraph</p>,
   },
   argTypes: {
     children: {
       table: {
         disable: true,
-      },  
+      },
     },
     asChild: {
       table: {
         disable: true,
-      }
-    }
-  }
-}
+      },
+    },
+  },
+};
